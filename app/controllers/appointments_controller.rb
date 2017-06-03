@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
     date = if params[:date]
       params[:date]
     else
-      date = Date.today
+      Date.today
     end
     starts_at = date.to_datetime
     ends_at = starts_at + 1
