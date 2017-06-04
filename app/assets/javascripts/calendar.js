@@ -4,6 +4,9 @@ $(document).ready(function(){
 		events:  function(start, end, timezone, callback){
 			$.ajax({
 				url: '/appointments',
+				data: {
+					start: encodeURIComponent(start._d.toDateString()),
+				},
 				success: function(response){
 					var events = response.map(function(appointment){
 						return {title: appointment.patient, start: appointment.starts_at, end: appointment.ends_at}
