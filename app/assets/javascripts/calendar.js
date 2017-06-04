@@ -26,4 +26,17 @@ $(document).ready(function(){
 	$('#calendar.all-doctors').fullCalendar(new CalendarOptions('/appointments'));
 
 	$('#calendar.one-doctor').fullCalendar(new CalendarOptions($(location).attr('pathname') + '/appointments'));
+
+	$('#new_appointment').on('submit', function(event){
+		event.preventDefault();
+		$.ajax({
+			url: $(this).attr('action'),
+			method: $(this).attr('method'),
+			data: $(this).serialize(),
+			success: function(response){
+				$('#calendar.one-doctor').fullCalendar('refetchEvents');
+				$(this).trigger("reset");
+			}.bind(this),
+		})
+	})
 })
