@@ -1,9 +1,16 @@
 $(document).ready(function(){
-	$('#calendar.all-doctors').fullCalendar({
+
+	var calendarOptions = {
 		defaultView: 'agendaDay',
-		events:  function(start, end, timezone, callback){
+		allDayDefault: false,
+	}
+
+	var allDoctorCalendarOptions = calendarOptions
+	allDoctorCalendarOptions.events = eventsFetcher('/appointments');
+	function eventsFetcher(url) {
+		return function(start, end, timezone, callback){
 			$.ajax({
-				url: '/appointments',
+				url: url,
 				data: {
 					date: encodeURIComponent(start._d.toJSON()),
 				},
@@ -14,9 +21,10 @@ $(document).ready(function(){
 					callback(events);
 				}
 			})
-		},
-		allDayDefault: false,
-	});
+		}
+	};
+
+	$('#calendar.all-doctors').fullCalendar(allDoctorCalendarOptions);
 
 	$('#calendar.one-doctor').fullCalendar({
 		defaultView: 'agendaDay',
