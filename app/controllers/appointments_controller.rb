@@ -1,5 +1,4 @@
 class AppointmentsController < ApplicationController
-  include TimeControllerConcern
 
   def index
     date = if params[:date]
