@@ -5,8 +5,9 @@ $(document).ready(function(){
 		allDayDefault: false,
 	}
 
-	var allDoctorCalendarOptions = calendarOptions
-	allDoctorCalendarOptions.events = eventsFetcher('/appointments');
+	var allDoctorsCalendarOptions = calendarOptions
+	allDoctorsCalendarOptions.events = eventsFetcher('/appointments');
+
 	function eventsFetcher(url) {
 		return function(start, end, timezone, callback){
 			$.ajax({
@@ -24,7 +25,7 @@ $(document).ready(function(){
 		}
 	};
 
-	$('#calendar.all-doctors').fullCalendar(allDoctorCalendarOptions);
+	$('#calendar.all-doctors').fullCalendar(allDoctorsCalendarOptions);
 
 	$('#calendar.one-doctor').fullCalendar({
 		defaultView: 'agendaDay',
