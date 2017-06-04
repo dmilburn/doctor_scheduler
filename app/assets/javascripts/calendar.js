@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 	$('#new_appointment').on('submit', function(event){
 		event.preventDefault();
+		$('#appointment-errors').empty();
 		$.ajax({
 			url: $(this).attr('action'),
 			method: $(this).attr('method'),
@@ -37,6 +38,9 @@ $(document).ready(function(){
 				$('#calendar.one-doctor').fullCalendar('refetchEvents');
 				$(this).trigger("reset");
 			}.bind(this),
+			error: function(errors){
+				$('#appointment-errors').append(errors.responseJSON.join('|'));
+			}
 		})
 	})
 })
