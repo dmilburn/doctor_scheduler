@@ -1,7 +1,7 @@
 <%= form_for [@doctor, @appointment] do |f|%>
 	Patient: <%= f.text_field :patient %>
-	Start Time: <%= f.datetime_select :starts_at %>
-	End Time: <%= f.datetime_select :ends_at %>
+	Start Time: <%= f.datetime_select :starts_at, :discard_seconds => true %>
+	End Time: <%= f.datetime_select :ends_at, :discard_seconds => true %>
 	<%= f.submit %>
 <% end %>
 
