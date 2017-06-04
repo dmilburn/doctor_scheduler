@@ -5,7 +5,7 @@ $(document).ready(function(){
 			$.ajax({
 				url: '/appointments',
 				data: {
-					start: encodeURIComponent(start._d.toDateString()),
+					date: encodeURIComponent(start._d.toJSON()),
 				},
 				success: function(response){
 					var events = response.map(function(appointment){
