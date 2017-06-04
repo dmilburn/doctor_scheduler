@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'calendar#index'
 
   resources :appointments, only: [:index, :create]
   resources :doctors, only: [:show]
