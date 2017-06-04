@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'calendar#index'
 
-  resources :appointments, only: [:index, :create]
+  resources :appointments, only: [:index]
   resources :doctors, only: [:show] do
-    resources :appointments, only: [:index]
+    resources :appointments, only: [:index, :create]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

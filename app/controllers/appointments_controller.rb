@@ -18,7 +18,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    appointment = Appointment.new(appointment_params)
+    doctor = Doctor.find_by(id: params[:doctor_id])
+    appointment = doctor.appointments.new(appointment_params)
     if appointment.save
       render json: appointment
     else
