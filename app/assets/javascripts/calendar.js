@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#calendar').fullCalendar({
+	$('#calendar.all-doctors').fullCalendar({
 		defaultView: 'agendaDay',
 		events:  function(start, end, timezone, callback){
 			$.ajax({
