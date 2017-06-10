@@ -1,11 +1,39 @@
 <h3 class="center-text"><%= @doctor.name %></h3>
 
-<div id="appointment-errors"></div>
-<%= form_for [@doctor, @appointment] do |f|%>
-	Patient: <%= f.text_field :patient %>
-	Start Time: <%= f.datetime_select :starts_at, :discard_seconds => true %>
-	End Time: <%= f.datetime_select :ends_at, :discard_seconds => true %>
-	<%= f.submit %>
-<% end %>
+<div class="form-wrapper">
+	<div class="inner-form-wrapper">
+		<h4 class="center-text">Schedule a new appointment</h4>
+		<div id="appointment-errors"></div>
+		<%= form_for [@doctor, @appointment] do |f|%>
+			<div class="input-wrapper">
+				<div>
+					<%= f.label :patient %>
+				</div>
+				<div>
+					<%= f.text_field :patient %>
+				</div>
+			</div>
+			<div class="input-wrapper">
+				<div>
+					<%= f.label :starts_at %>
+				</div>
+				<div>
+					<%= f.datetime_select :starts_at, :discard_seconds => true %>
+				</div>
+			</div>
+			<div class="input-wrapper">
+				<div>
+					<%= f.label :ends_at%>
+				</div>
+				<div>
+					<%= f.datetime_select :ends_at, :discard_seconds => true %>
+				</div>
+			</div>
+			<div class="input-wrapper">
+				<%= f.submit %>
+			</div>
+		<% end %>
+	</div>
+</div>
 
 <div id="calendar" class="one-doctor"></div>

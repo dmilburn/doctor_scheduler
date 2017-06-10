@@ -54,6 +54,27 @@
 	text-align: center;
 }
 
+.form-wrapper {
+	border: 1px solid black;
+	padding-bottom: 1em;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.inner-form-wrapper {
+	background-color: #a9cce8;
+	width: 90%;
+	height: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 1em;
+}
+
+.input-wrapper {
+	padding-bottom: 1em;
+}
+
 .clear-fix {
     clear: both;
 }
