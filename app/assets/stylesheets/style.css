@@ -75,6 +75,10 @@
 	padding-bottom: 1em;
 }
 
+.errors {
+	color: red;
+	padding-bottom: 1em;
+}
 .clear-fix {
     clear: both;
 }
