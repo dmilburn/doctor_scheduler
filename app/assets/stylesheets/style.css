@@ -2,6 +2,26 @@
 	box-sizing: border-box;
 }
 
+@media (min-width : 700px) {
+	#nav-wrapper {
+		padding: 1em;
+		width: 25%;
+		height: 100%;
+		position: absolute;
+		float: left;
+		background-color: #a9cce8;
+	}
+
+	#main {
+		float: right;
+	}
+}
+.container {
+	margin: 1em;
+	border: 1px solid black;
+	position: relative;
+	padding-bottom: 1em;
+}
 
 #navbar {
 	list-style:none;
@@ -14,38 +34,22 @@
 	padding-bottom: 1em;
 }
 
-.container {
-	margin: 1em;
-	border: 1px solid black;
-	position: relative;
-	padding-bottom: 1em;
-}
 
-#sidebar {
-	padding: 1em;
-	width: 25%;
-	height: 100%;
-	position: absolute;
-	float: left;
-	background-color: #a9cce8;
-}
-
-#sidebar a {
+#nav-wrapper a {
 	text-decoration: none;
 	color: black;
 }
 
-#sidebar li {
+#nav-wrapper li {
 	padding-bottom: 1em;
 }
 
-#sidebar a:hover {
+#nav-wrapper a:hover {
 	color: grey;
 }
 
 #main {
 	width: 75%;
-	float: right;
 	padding-left: 1em;
 	padding-right: 1em;
 	border-left: 1px solid black;
