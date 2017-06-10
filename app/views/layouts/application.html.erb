@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-	<div id="sidebar">
+	<div id="sidebar" class="center-text">
 		<h2 id="logo"><%= link_to "Doctor Scheduler", root_path %></h2>
 		<ul id="navbar">
 			<% @doctors.each do |doctor| %>
@@ -20,7 +20,7 @@
 	<div id="main">
 		<%= yield %>
 	</div>
-	<div class="clearFix"></div>
+	<div class="clear-fix"></div>
 </div>
 </body>
 </html>

@@ -27,7 +27,6 @@
 	position: absolute;
 	float: left;
 	background-color: #a9cce8;
-	text-align: center;
 }
 
 #sidebar a {
@@ -51,6 +50,10 @@
 	border-left: 1px solid black;
 }
 
-.clearFix {
+.center-text {
+	text-align: center;
+}
+
+.clear-fix {
     clear: both;
 }

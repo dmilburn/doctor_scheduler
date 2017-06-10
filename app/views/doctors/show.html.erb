@@ -1,3 +1,5 @@
+<h3 class="center-text">Appointments for <%= @doctor.name %></h3>
+
 <div id="appointment-errors"></div>
 <%= form_for [@doctor, @appointment] do |f|%>
 	Patient: <%= f.text_field :patient %>
