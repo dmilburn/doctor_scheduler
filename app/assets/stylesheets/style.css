@@ -25,6 +25,16 @@
 	background-color: #a9cce8;
 }
 
+#sidebar a {
+	text-decoration: none;
+	color: black;
+}
+
+#sidebar a:hover {
+	color: grey;
+}
+
+
 #main {
 	width: 75%;
 	float: right;
