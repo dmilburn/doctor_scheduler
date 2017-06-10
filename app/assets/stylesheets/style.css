@@ -2,12 +2,16 @@
 	box-sizing: border-box;
 }
 
+
 #navbar {
-	list-style-type: none;
+	list-style:none;
+    padding-left:0;
 }
 
 #logo {
 	font-size: 2em;
+	border-bottom: 1px solid black;
+	padding-bottom: 1em;
 }
 
 .container {
@@ -23,11 +27,16 @@
 	position: absolute;
 	float: left;
 	background-color: #a9cce8;
+	text-align: center;
 }
 
 #sidebar a {
 	text-decoration: none;
 	color: black;
+}
+
+#sidebar li {
+	padding-bottom: 1em;
 }
 
 #sidebar a:hover {
