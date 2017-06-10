@@ -1,7 +1,7 @@
 <h3 class="center-text"><%= @doctor.name %></h3>
 
-<div class="form-wrapper">
-	<div class="inner-form-wrapper">
+<div class="form-wrapper center">
+	<div class="inner-form-wrapper center">
 		<h4 class="center-text">Schedule a new appointment</h4>
 		<div id="appointment-errors" class="errors"></div>
 		<%= form_for [@doctor, @appointment] do |f|%>

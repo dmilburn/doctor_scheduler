@@ -54,12 +54,15 @@
 	text-align: center;
 }
 
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .form-wrapper {
 	border: 1px solid black;
 	padding-bottom: 1em;
 	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
 	background-color: #e1e5ed;
 }
 
@@ -67,8 +70,6 @@
 	background-color: #a9cce8;
 	width: 90%;
 	height: 90%;
-	margin-right: auto;
-	margin-left: auto;
 	padding-left: 1em;
 }
 
