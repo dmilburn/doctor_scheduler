@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 #navbar {
 	list-style-type: none;
 }
@@ -7,15 +11,27 @@
 }
 
 .container {
-	padding: 1em;
+	margin: 1em;
+	border: 1px solid black;
+	position: relative;
 }
 
 #sidebar {
+	padding: 1em;
 	width: 25%;
+	height: 100%;
+	position: absolute;
 	float: left;
+	background-color: #99abc9;
 }
 
 #main {
 	width: 75%;
 	float: right;
+	padding-left: 1em;
+	border-left: 1px solid black;
+}
+
+.clearFix {
+    clear: both;
 }
