@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	$(".hamburger").click(function(){
-		console.log("hello")
 		$("#navbar").slideToggle("slow", function(){
 			$(".cross").show();
 			$(".hamburger").hide();
