@@ -10,11 +10,15 @@
 <div class="container">
 	<div id="nav-wrapper" class="center-text blue">
 		<h2 id="logo"><%= link_to "Doctor Scheduler", root_path %></h2>
+		<button class="hamburger">&#9776;</button>
+		<button class="cross">&#735;</button>
 		<ul id="navbar">
 			<% @doctors.each do |doctor| %>
 				<li><%= link_to doctor.name, doctor_path(doctor)%></li>
 			<% end %>
 		</ul>
+		<div class="clear-fix"></div>
+
 	</div>
 
 	<div id="main">
