@@ -4,7 +4,6 @@
 
 @media (min-width : 700px) {
 	#nav-wrapper {
-		padding: 1em;
 		width: 25%;
 		height: 100%;
 		position: absolute;
@@ -36,6 +35,16 @@
 	#navbar, .cross {
 		display: none;
 	}
+
+	.hamburger, .cross {
+		cursor:pointer;
+		outline:none;
+		background:none;
+		border:0;
+		float: right;
+		font-size: 1.5em;
+		padding-top: .5em;
+	}
 }
 
 .container {
@@ -49,6 +58,9 @@
     padding-left:0;
 }
 
+#nav-wrapper {
+	padding: 1em;
+}
 
 #nav-wrapper a {
 	text-decoration: none;
