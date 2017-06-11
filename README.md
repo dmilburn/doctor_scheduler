@@ -8,6 +8,7 @@ This app is an MVP for the needs of an office with several doctors scheduling ap
 
 * [Download Postgresql](https://www.postgresql.org/download/)
 * [Download the Bundler Gem](https://rubygems.org/gems/bundler/versions/1.11.2) `gem install bundler`
+* Clone this repo
 * Set up the database
 	* `be rake db:create`
 	* `be rake db:migrate`
