@@ -30,6 +30,10 @@
 		float: left;
 	}
 
+	#nav-wrapper {
+		padding-bottom: 1em;
+	}
+
 	#navbar, .cross {
 		display: none;
 	}
@@ -54,7 +58,6 @@
 
 .container {
 	margin: 1em;
-	border: 1px solid black;
 	position: relative;
 }
 
@@ -95,7 +98,7 @@
 }
 
 .form-wrapper {
-	border: 1px solid black;
+	padding-top: 1em;
 	padding-bottom: 1em;
 	background-color: #e1e5ed;
 	margin-bottom: 1em;
@@ -106,6 +109,7 @@
 }
 
 .inner-form-wrapper {
+	padding-top: 1em;
 	width: 90%;
 	height: 90%;
 	padding-left: 1em;
