@@ -10,9 +10,9 @@ class AppointmentsController < ApplicationController
     ends_at = starts_at + 1
     if params[:doctor_id]
       doctor = Doctor.find_by(id: params[:doctor_id])
-      render json: doctor.appointments.during(starts_at, ends_at)
+      render json: doctor.appointments.during(starts_at, ends_at), :include => {:doctor => {:only => :name}}
     else
-      render json: Appointment.during(starts_at, ends_at)
+      render json: Appointment.during(starts_at, ends_at), :include => {:doctor => {:only => :name}}
     end
   end
 

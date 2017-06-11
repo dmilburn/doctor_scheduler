@@ -13,7 +13,7 @@ CalendarOptions.prototype.eventsFetcher = function(url) {
 			},
 			success: function(response){
 				var events = response.map(function(appointment){
-					return {title: appointment.patient, start: appointment.starts_at, end: appointment.ends_at}
+					return {title: appointment.doctor.name + ": " + appointment.patient, start: appointment.starts_at, end: appointment.ends_at}
 				})
 				callback(events);
 			}
