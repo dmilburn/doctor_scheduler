@@ -6,7 +6,6 @@
 	#nav-wrapper {
 		width: 25%;
 		height: 100%;
-		position: absolute;
 		float: left;
 		background-color: #a9cce8;
 	}
@@ -20,7 +19,6 @@
 	#main {
 		float: right;
 		width: 75%;
-		border-left: 1px solid black;
 	}
 	.hamburger, .cross {
 		display: none;
